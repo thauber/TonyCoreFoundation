@@ -10,7 +10,7 @@
 
 @implementation UIColor (TCF)
 
-+ colorWithHex:(NSString*)hex {
++(UIColor*) colorWithHex:(NSString*)hex {
     NSString *cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     
     // String should be 6 or 8 characters

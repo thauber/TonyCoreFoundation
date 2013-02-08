@@ -12,4 +12,8 @@
 
 -(NSString *)formattedTimeSinceNow;
 
+-(NSDate *) toLocalTime;
+
+-(NSDate *) toGlobalTime;
+
 @end

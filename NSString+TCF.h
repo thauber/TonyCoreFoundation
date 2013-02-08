@@ -11,5 +11,8 @@
 @interface NSString (TCF)
 
 - (NSString*)pluralize:(NSInteger)count;
+- (NSString *)stringByDecodingURLFormat;
+- (NSString *)stringByEncodingURLFormat;
+- (NSMutableDictionary *)dictionaryFromQueryComponents;
 
 @end

@@ -44,4 +44,24 @@
     return @"Years ago";
 }
 
+
+/*
+ This should really be part of CCF instead of TCF but I guess it works here...
+ 
+ All dates sent to and from the server should be in GMT. These functions let you convert timezones.
+*/
+-(NSDate *) toLocalTime
+{
+    NSTimeZone *tz = [NSTimeZone defaultTimeZone];
+    NSInteger seconds = [tz secondsFromGMTForDate: self];
+    return [NSDate dateWithTimeInterval: seconds sinceDate: self];
+}
+
+-(NSDate *) toGlobalTime
+{
+    NSTimeZone *tz = [NSTimeZone defaultTimeZone];
+    NSInteger seconds = -[tz secondsFromGMTForDate: self];
+    return [NSDate dateWithTimeInterval: seconds sinceDate: self];
+}
+
 @end

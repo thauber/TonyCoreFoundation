@@ -10,6 +10,6 @@
 
 @interface UIColor (TCF)
 
-+ colorWithHex:(NSString*)hex;
++(UIColor*) colorWithHex:(NSString*)hex;
 
 @end

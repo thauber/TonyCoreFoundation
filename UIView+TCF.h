@@ -7,6 +7,7 @@
 //
 
 
+typedef void (^TCFTapHandler)(id sender);
 
 @interface UIView (TFC)
 
@@ -14,5 +15,12 @@
 @property (nonatomic, assign) CGFloat right;
 @property (nonatomic, assign) CGFloat top;
 @property (nonatomic, assign) CGFloat bottom;
+@property (nonatomic, assign) CGFloat width;
+@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, readonly) CGPoint boundedCenter;
+@property (nonatomic, strong) TCFTapHandler tapHandler;
+
+- (void) stretchBottomTo:(CGFloat)newBottom;
 
 @end
+
